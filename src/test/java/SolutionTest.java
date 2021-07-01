@@ -6,6 +6,13 @@ public class SolutionTest {
 
     @Test
     void t1() {
-        assertThat(new Solution().solution()).isEqualTo("123");
+        assertThat(new Solution().minDeletions("aab")).isEqualTo(0);
+        assertThat(new Solution().minDeletions("aaabbbcc")).isEqualTo(2);
+        assertThat(new Solution().minDeletions("aaabbbccfff")).isEqualTo(0);
+    }
+
+    @Test
+    void containsDuplicate() {
+        new Solution().containsDuplicate(new int[]{1,2,3,1});
     }
 }
